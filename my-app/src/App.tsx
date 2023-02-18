@@ -10,8 +10,9 @@ function App() {
     <div className="App">
       <h1>React + TypeScript アプリ</h1>
       <Routes>
-        <Route path="/" element={<UserHome />} />
-        <Route path="*" element={<NoMatch />} />
+        <Route path="/" element={<UserHome />}>
+          <Route path="*" element={<NoMatch />} />
+        </Route>
       </Routes>
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
